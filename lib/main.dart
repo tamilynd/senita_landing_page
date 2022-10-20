@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
     ]);
 
     return MaterialApp(
-        title: 'Flutter Landing Page',
+        title: 'Senita - Employee Engagement',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           textTheme: GoogleFonts.cairoTextTheme(

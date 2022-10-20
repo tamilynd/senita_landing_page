@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:landing_page/reusedWidgets/learn_more_button.dart';
+import 'package:landing_page/reusedWidgets/sign_up_button.dart';
 
 class WeAreSenita extends StatelessWidget {
-  const WeAreSenita({super.key});
+  final Function signUpFunction;
+  const WeAreSenita({super.key, required this.signUpFunction});
 
   @override
   Widget build(BuildContext context) {
@@ -58,9 +59,10 @@ class WeAreSenita extends StatelessWidget {
                       ConstrainedBox(
                           constraints: BoxConstraints(
                               maxWidth: width * 0.2, maxHeight: width * 0.1),
-                          child: LearnMore(
+                          child: SignUp(
                             textColor: const Color.fromRGBO(200, 162, 135, 1),
                             maxWidth: width * 0.1,
+                            buttonFunction: signUpFunction,
                           ))
                     ],
                   )
@@ -115,9 +117,11 @@ class WeAreSenita extends StatelessWidget {
                       ConstrainedBox(
                           constraints: BoxConstraints(
                               maxWidth: width * 0.2, maxHeight: width * 0.05),
-                          child: LearnMore(
-                              textColor: const Color.fromRGBO(200, 162, 135, 1),
-                              maxWidth: width * 0.25)),
+                          child: SignUp(
+                            textColor: const Color.fromRGBO(200, 162, 135, 1),
+                            maxWidth: width * 0.25,
+                            buttonFunction: signUpFunction,
+                          )),
                       SizedBox(height: width * 0.05),
                     ],
                   )

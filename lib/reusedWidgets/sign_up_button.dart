@@ -2,19 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class LearnMore extends StatelessWidget {
-  const LearnMore({super.key, required this.textColor, required this.maxWidth});
+class SignUp extends StatefulWidget {
+  const SignUp(
+      {super.key,
+      required this.textColor,
+      required this.maxWidth,
+      required this.buttonFunction});
   final Color textColor;
   final double maxWidth;
+  final Function buttonFunction;
 
+  @override
+  State<SignUp> createState() => _SignUpState();
+}
+
+class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        width: maxWidth,
+        width: widget.maxWidth,
         child: FittedBox(
             fit: BoxFit.scaleDown,
             child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  widget.buttonFunction();
+                },
                 style: ButtonStyle(
                     backgroundColor:
                         const MaterialStatePropertyAll<Color>(Colors.white),
@@ -28,11 +40,11 @@ class LearnMore extends StatelessWidget {
                         RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.0)))),
                 child: Text(
-                  "Learn More",
+                  "Sign Up",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: textColor,
+                      color: widget.textColor,
                       fontSize: 40,
                       height: 1.5),
                 ))));

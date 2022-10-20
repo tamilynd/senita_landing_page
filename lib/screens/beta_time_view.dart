@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:landing_page/reusedWidgets/dynamic_row.dart';
 import 'package:landing_page/reusedWidgets/sized_text.dart';
+import 'package:landing_page/reusedWidgets/thank_you_dialog.dart';
 
 class BetaTimeView extends StatefulWidget {
   const BetaTimeView({super.key});
@@ -90,7 +91,13 @@ class _BetaTimeViewState extends State<BetaTimeView> {
                     child: FittedBox(
                         fit: BoxFit.scaleDown,
                         child: TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              showDialog(
+                                  context: context,
+                                  builder: (context) {
+                                    return const ThankYouDialog();
+                                  });
+                            },
                             style: ButtonStyle(
                                 backgroundColor:
                                     const MaterialStatePropertyAll<Color>(
