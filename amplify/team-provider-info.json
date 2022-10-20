@@ -10,6 +10,14 @@
       "StackName": "amplify-senitalandingpage-dev-113321",
       "StackId": "arn:aws:cloudformation:us-west-1:858122154035:stack/amplify-senitalandingpage-dev-113321/4b1af9a0-509d-11ed-a10f-028f11848825",
       "AmplifyAppId": "dwhdr1k0t9g1r"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "dwhdr1k0t9g1r",
+          "type": "manual"
+        }
+      }
     }
   }
 }
