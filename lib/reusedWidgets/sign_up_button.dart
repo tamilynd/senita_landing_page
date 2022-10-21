@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:landing_page/reusedWidgets/sized_text.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp(
@@ -39,14 +41,17 @@ class _SignUpState extends State<SignUp> {
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.0)))),
-                child: Text(
-                  "Sign Up",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: widget.textColor,
-                      fontSize: 40,
-                      height: 1.5),
-                ))));
+                child: Center(
+                    child: SizedText(
+                        width: widget.maxWidth * 0.6,
+                        text: Text(
+                          "Sign Up",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.raleway(
+                              fontWeight: FontWeight.bold,
+                              color: widget.textColor,
+                              fontSize: 35,
+                              height: 1.5),
+                        ))))));
   }
 }

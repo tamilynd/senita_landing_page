@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:landing_page/reusedWidgets/sign_up_button.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class WeAreSenita extends StatelessWidget {
   final Function signUpFunction;
@@ -28,33 +29,34 @@ class WeAreSenita extends StatelessWidget {
                     children: [
                       ConstrainedBox(
                           constraints: BoxConstraints(maxWidth: width * 0.25),
-                          child: const Text('WE ARE',
+                          child: Text('WE ARE',
                               textAlign: TextAlign.left,
-                              style: TextStyle(
+                              style: GoogleFonts.muktaVaani(
                                   fontWeight: FontWeight.normal,
-                                  color: Color.fromRGBO(255, 255, 255, 1),
+                                  color: const Color.fromRGBO(255, 255, 255, 1),
                                   fontSize: 25,
                                   height: 1.15))),
                       ConstrainedBox(
                           constraints: BoxConstraints(maxWidth: width * 0.25),
-                          child: const Text('Senita Co.',
+                          child: Text('Senita',
                               textAlign: TextAlign.left,
-                              style: TextStyle(
+                              style: GoogleFonts.raleway(
                                   fontWeight: FontWeight.bold,
-                                  color: Color.fromRGBO(255, 255, 255, 1),
+                                  color: const Color.fromRGBO(255, 255, 255, 1),
                                   fontSize: 45,
                                   height: 1.15))),
                       SizedBox(height: width * 0.02),
                       ConstrainedBox(
                           constraints: BoxConstraints(maxWidth: width * 0.25),
-                          child: const Text(
+                          child: Text(
                               'An employee engagement \nsoftware that caters to \nrecently hired employee \nneeds.',
                               textAlign: TextAlign.left,
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Color.fromRGBO(255, 255, 255, 1),
+                              style: GoogleFonts.sumana(
+                                  fontWeight: FontWeight.normal,
+                                  color: const Color.fromRGBO(255, 255, 255, 1),
                                   fontSize: 22,
-                                  height: 1.25))),
+                                  height: 1.25,
+                                  letterSpacing: 1.25))),
                       SizedBox(height: width * 0.02),
                       ConstrainedBox(
                           constraints: BoxConstraints(

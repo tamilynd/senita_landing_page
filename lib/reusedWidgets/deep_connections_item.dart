@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class DeepConnectionsItem extends StatelessWidget {
   final String icon;
@@ -26,8 +27,8 @@ class DeepConnectionsItem extends StatelessWidget {
               fit: BoxFit.scaleDown,
               child: Text(title,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(
-                      color: Color.fromRGBO(77, 63, 40, 1),
+                  style: GoogleFonts.muktaVaani(
+                      color: const Color.fromRGBO(77, 63, 40, 1),
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
                       height: 1.25)))),
@@ -39,9 +40,9 @@ class DeepConnectionsItem extends StatelessWidget {
               child: RichText(
                   textAlign: TextAlign.left,
                   text: TextSpan(
-                    style: const TextStyle(
+                    style: GoogleFonts.muktaVaani(
                         fontWeight: FontWeight.normal,
-                        color: Color.fromRGBO(77, 63, 40, 1),
+                        color: const Color.fromRGBO(77, 63, 40, 1),
                         fontSize: 50,
                         height: 1.5),
                     children: paragraph,

@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:landing_page/reusedWidgets/onboarding_features_item.dart';
 import 'package:landing_page/reusedWidgets/sized_text.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class OnboardingFeaturesView extends StatelessWidget {
   const OnboardingFeaturesView({super.key});
@@ -17,10 +18,10 @@ class OnboardingFeaturesView extends StatelessWidget {
             SizedBox(height: width * 0.05),
             SizedText(
                 width: width * 0.4,
-                text: const Text('New Employee\nOnboarding Features',
+                text: Text('New Employee\nOnboarding Features',
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: Color.fromRGBO(200, 162, 135, 1),
+                    style: GoogleFonts.sumana(
+                        color: const Color.fromRGBO(200, 162, 135, 1),
                         fontSize: 60,
                         height: 1.25))),
             SizedBox(height: width * 0.05),
@@ -28,9 +29,10 @@ class OnboardingFeaturesView extends StatelessWidget {
               Column(children: [
                 OnboardingFeature(
                     paragraph: [
-                      const TextSpan(
+                      TextSpan(
                           text: 'Enduring Connections:',
-                          style: TextStyle(fontWeight: FontWeight.bold)),
+                          style: GoogleFonts.muktaVaani(
+                              fontWeight: FontWeight.bold)),
                       WidgetSpan(child: SizedBox(width: width * 0.0075)),
                       const TextSpan(
                         text:
@@ -41,11 +43,12 @@ class OnboardingFeaturesView extends StatelessWidget {
                     color: const Color.fromRGBO(77, 63, 40, 1)),
                 SizedBox(height: width * 0.025),
                 OnboardingFeature(
-                    paragraph: const [
+                    paragraph: [
                       TextSpan(
                           text: 'No one falls through the cracks:\n',
-                          style: TextStyle(fontWeight: FontWeight.bold)),
-                      TextSpan(
+                          style: GoogleFonts.muktaVaani(
+                              fontWeight: FontWeight.bold)),
+                      const TextSpan(
                         text:
                             'Measure how well new employees are\nbeing incorporated',
                       )
@@ -55,9 +58,10 @@ class OnboardingFeaturesView extends StatelessWidget {
                 SizedBox(height: width * 0.025),
                 OnboardingFeature(
                     paragraph: [
-                      const TextSpan(
+                      TextSpan(
                           text: 'Real-time insight',
-                          style: TextStyle(fontWeight: FontWeight.bold)),
+                          style: GoogleFonts.muktaVaani(
+                              fontWeight: FontWeight.bold)),
                       WidgetSpan(child: SizedBox(width: width * 0.0075)),
                       const TextSpan(
                         text:
